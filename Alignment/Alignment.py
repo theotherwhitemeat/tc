@@ -31,16 +31,16 @@ ABC-
 A-CE
 1) 
      
-"AAA  BAAAABAA"
-"AAA ABAA  BAAA"
+"AAABAAAABAA"
+"AAAABAABAAA"
 1
 Returns: 7
  AAA-BAAAABAA-
  AAAABAA--BAAA
 2) 
      
-"AAA BAAAABAA"
-"AAAABAA  BAAA"
+"AAABAAAABAA"
+"AAAABAABAAA"
 10
 Returns: 28
  AAABAAAABAA----
@@ -60,43 +60,43 @@ Returns: 5
 (let's call this naive / brute-force?)
 1) generate string permutations
 2) calculate costs
-	cost = dash + x
+    cost = dash + x
 3) pick the cheapest
 """
 
 class Alignment(object):
-	def __init__(self):
-		pass
+    def __init__(self):
+        pass
 
-	@staticmethod
-	def align(A, B, x):
-		""" (int) aligns strings A and B via '-' characters and returns alignment cost """
+    @staticmethod
+    def align(A, B, x):
+        """ (int) aligns strings A and B via '-' characters and returns alignment cost """
 
-		def getStringCost(string, x):
-			""" (int) given a string, calculate the total cost if '-' is cost x + 1 and
-				 and '--' is x + 2 """
+        def getStringCost(string, x):
+            """ (int) given a string, calculate the total cost if '-' is cost x + 1 and
+                 and '--' is x + 2 """
 
-			cost = 0
-			dash = 0
-			for char in string:
-				if char == '-':
-					dash += 1
-				elif dash > 0:
-					cost += (x + dash)
-					dash = 0
-			# now account for a string ending with dashes
-			if dash > 0:
-				cost += (x + dash)
+            cost = 0
+            dash = 0
+            for char in string:
+                if char == '-':
+                    dash += 1
+                elif dash > 0:
+                    cost += (x + dash)
+                    dash = 0
+            # now account for a string ending with dashes
+            if dash > 0:
+                cost += (x + dash)
 
-			return cost
+            return cost
 
 
-		resultA = str()
-		resultB = str()
+        resultA = str()
+        resultB = str()
 
 
 def main():
-	""" sup main """
+    """ sup main """
 
 
 if __name__ == "__main__":
