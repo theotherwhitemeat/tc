@@ -54,8 +54,10 @@ Returns: 2
 Returns: 49
 """
 
+""" Status: Complete """
+
 class AdvertisingAgency(object):
-    def __init__():
+    def __init__(self):
         pass
 
     @staticmethod
