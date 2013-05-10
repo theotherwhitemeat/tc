@@ -77,7 +77,7 @@ class UserName(object):
 
     @staticmethod
     def newMember(existingNames, newName):
-        """ (string) Returns an approved user name.  If the newName
+        """ (string/None) Returns an approved user name.  If the newName
           is already contained in existingNames, then suggest an alternative """
 
         def validateName(newName):
@@ -92,7 +92,7 @@ class UserName(object):
 
         if newName not in existingNames: return newName
         if newName in existingNames:
-            for i in range(1, len(existingNames)):
+            for i in range(1, len(existingNames)+1):
                 suggestName = newName + str(i)
                 if suggestName not in existingNames: return suggestName
 
@@ -103,7 +103,8 @@ def main():
              (["MasterOfDisaster", "TygerTyger1", "DingBat", "Orpheus", "TygerTyger", "WolfMan", "MrKnowItAll"], "TygerTyger"),
              (["TygerTyger2000", "TygerTyger1", "MasterDisaster", "DingBat", "Orpheus", "WolfMan", "MrKnowItAll"], "TygerTyger"),
              (["grokster2", "BrownEyedBoy", "Yoop", "BlueEyedGirl", "grokster", "Elemental", "NightShade", "Grokster1"], "grokster"),
-             (["Bart4", "Bart5", "Bart6", "Bart7", "Bart8", "Bart9", "Bart10", "Lisa", "Marge", "Homer", "Bart", "Bart1", "Bart2", "Bart3", "Bart11", "Bart12"],"Bart")]
+             (["Bart4", "Bart5", "Bart6", "Bart7", "Bart8", "Bart9", "Bart10", "Lisa", "Marge", "Homer", "Bart", "Bart1", "Bart2", "Bart3", "Bart11", "Bart12"],"Bart"),
+             (["cornercase",],"cornercase")]
 
     for item in tests:
         print UserName.newMember(item[0], item[1])
