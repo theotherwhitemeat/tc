@@ -72,7 +72,7 @@ Returns: -1000
 The company doesn't gain anything! It has to pay the people who bet on the only outcome possible. It pays 100*10 cents. Hence, the net gain is -1000. (Negative indicates loss.)
 
 
-Status: WIP
+Status: Complete
 """
 
 
