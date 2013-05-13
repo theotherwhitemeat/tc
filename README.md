@@ -7,6 +7,7 @@ Completed
 ---------
 - AdvertisingAgency:   http://community.topcoder.com/stat?c=problem_statement&pm=7558
 - Betting Money:       http://community.topcoder.com/stat?c=problem_statement&pm=2297
+- CCipher:             http://community.topcoder.com/stat?c=problem_statement&pm=1667
 - MatchMaking:         http://community.topcoder.com/stat?c=problem_statement&pm=2911
 - NoOrderOfOperations: http://community.topcoder.com/stat?c=problem_statement&pm=2868
 - PassingGrade:        http://community.topcoder.com/stat?c=problem_statement&pm=1962
