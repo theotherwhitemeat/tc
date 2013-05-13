@@ -9,7 +9,9 @@ Completed
 - Betting Money:       http://community.topcoder.com/stat?c=problem_statement&pm=2297
 - MatchMaking:         http://community.topcoder.com/stat?c=problem_statement&pm=2911
 - NoOrderOfOperations: http://community.topcoder.com/stat?c=problem_statement&pm=2868
+- PassingGrade:        http://community.topcoder.com/stat?c=problem_statement&pm=1962
 - Poetry:              http://community.topcoder.com/stat?c=problem_statement&pm=1835
+- Quipu:               http://community.topcoder.com/stat?c=problem_statement&pm=1686
 - UserName:            http://community.topcoder.com/stat?c=problem_statement&pm=2913
 - Yahtzee:             http://community.topcoder.com/stat?c=problem_statement&pm=1692
 
