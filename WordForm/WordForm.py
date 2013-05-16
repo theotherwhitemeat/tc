@@ -72,38 +72,28 @@ class WordForm(object):
         # We'll construct our structure in sequence, and store
         #  info about last character, consonant runs, and vowel runs.
         sequence = str()
-        last_char = str()
         c_run = bool()
         v_run = bool()
         word = word.lower()
 
-        vowels = set(['a', 'e', 'i', 'o', 'u', 'y'])
+        vowels = set(['a', 'e', 'i', 'o', 'u'])
 
         for i, char in enumerate(word):
             # Handle vowels with y corner-cases.
-            #  First if 'y' after a consonant
-            if (c_run and char == 'y') or \
-            # Or if character is a vowel...
-            (char in vowels) and \
-            # And not 'y' or not the first letter in the word...
-            ((char != 'y') or (i != 0)) and \
-            # And not a 'y' after another vowel.
-            not (v_run and char == 'y'):
+            #  If 'y' and preceded by a consonant, or a pure vowel
+            if (c_run and char == 'y') or (char in vowels):
                 # Account for the consonant run
                 if c_run:
                     sequence += 'C'
                     c_run = False
                 v_run = True
-            # else char is a consonant
+            # Else char is a consonant
             else:
                 # Account for the vowel run
                 if v_run:
                     sequence += 'V'
                     v_run = False
                 c_run = True
-            last_char = char
-
-            #print "char: %s, c_run: %s, v_run: %s, charisy: %s" % (char, c_run, v_run, char == 'y')
         # Now account for the last character in the loop
         sequence += 'C' if c_run else 'V'
 
