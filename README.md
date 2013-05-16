@@ -15,10 +15,9 @@ Completed
 - Quipu:               http://community.topcoder.com/stat?c=problem_statement&pm=1686
 - TallPeople:          http://community.topcoder.com/stat?c=problem_statement&pm=2923
 - UserName:            http://community.topcoder.com/stat?c=problem_statement&pm=2913
+- WordForm:            http://community.topcoder.com/stat?c=problem_statement&pm=2002
 - Yahtzee:             http://community.topcoder.com/stat?c=problem_statement&pm=1692
-
 
 WIP
 ---
 - Alignment:           http://community.topcoder.com/stat?c=problem_statement&pm=6249
-- WordForm:            http://community.topcoder.com/stat?c=problem_statement&pm=2002

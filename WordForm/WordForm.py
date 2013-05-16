@@ -56,8 +56,8 @@ Even though this isn't an English word, we use the rules defined in the statemen
 Returns: "C"
 
 
-Status: WIP
-Runtime: 
+Status: Complete
+Runtime: O(n) where n == len(word)
 """
 
 class WordForm(object):
@@ -75,27 +75,35 @@ class WordForm(object):
         last_char = str()
         c_run = bool()
         v_run = bool()
-        y_run = int()
+        word = word.lower()
 
         vowels = set(['a', 'e', 'i', 'o', 'u', 'y'])
 
-        for i, char in enumerate(word.lower()):
-            # handle vowels with y corner-cases
-            y_run = 0 if char != 'y' else (y_run + 1)
-            if (y_run > 0 and y_run % 2 == 0) or \
+        for i, char in enumerate(word):
+            # Handle vowels with y corner-cases.
+            #  First if 'y' after a consonant
+            if (c_run and char == 'y') or \
+            # Or if character is a vowel...
             (char in vowels) and \
-            ((char != 'y') or (i != 0)):
+            # And not 'y' or not the first letter in the word...
+            ((char != 'y') or (i != 0)) and \
+            # And not a 'y' after another vowel.
+            not (v_run and char == 'y'):
+                # Account for the consonant run
                 if c_run:
                     sequence += 'C'
                     c_run = False
                 v_run = True
             # else char is a consonant
             else:
+                # Account for the vowel run
                 if v_run:
                     sequence += 'V'
                     v_run = False
                 c_run = True
             last_char = char
+
+            #print "char: %s, c_run: %s, v_run: %s, charisy: %s" % (char, c_run, v_run, char == 'y')
         # Now account for the last character in the loop
         sequence += 'C' if c_run else 'V'
 
