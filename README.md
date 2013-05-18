@@ -10,6 +10,7 @@ Completed
 - CCipher:             http://community.topcoder.com/stat?c=problem_statement&pm=1667
 - MatchMaking:         http://community.topcoder.com/stat?c=problem_statement&pm=2911
 - NoOrderOfOperations: http://community.topcoder.com/stat?c=problem_statement&pm=2868
+- PaperFold:           http://community.topcoder.com/stat?c=problem_statement&pm=1846
 - PassingGrade:        http://community.topcoder.com/stat?c=problem_statement&pm=1962
 - Poetry:              http://community.topcoder.com/stat?c=problem_statement&pm=1835
 - Quipu:               http://community.topcoder.com/stat?c=problem_statement&pm=1686
