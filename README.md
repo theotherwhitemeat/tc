@@ -13,6 +13,7 @@ Completed
 - PaperFold:           http://community.topcoder.com/stat?c=problem_statement&pm=1846
 - PassingGrade:        http://community.topcoder.com/stat?c=problem_statement&pm=1962
 - Poetry:              http://community.topcoder.com/stat?c=problem_statement&pm=1835
+- QuickSums:           http://community.topcoder.com/stat?c=problem_statement&pm=2829
 - Quipu:               http://community.topcoder.com/stat?c=problem_statement&pm=1686
 - TallPeople:          http://community.topcoder.com/stat?c=problem_statement&pm=2923
 - UserName:            http://community.topcoder.com/stat?c=problem_statement&pm=2913
