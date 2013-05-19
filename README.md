@@ -27,6 +27,7 @@ Completed
 - PassingGrade:          http://community.topcoder.com/stat?c=problem_statement&pm=1962
 - Quipu:                 http://community.topcoder.com/stat?c=problem_statement&pm=1686
 - Soccer:                http://community.topcoder.com/stat?c=problem_statement&pm=1650
+- Sortness:              http://community.topcoder.com/stat?c=problem_statement&pm=7263
 - UserName:              http://community.topcoder.com/stat?c=problem_statement&pm=2913
 - Yahtzee:               http://community.topcoder.com/stat?c=problem_statement&pm=1692
 
