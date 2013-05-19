@@ -11,6 +11,7 @@ Completed
 - MatchMaking:           http://community.topcoder.com/stat?c=problem_statement&pm=2911
 - PaperFold:             http://community.topcoder.com/stat?c=problem_statement&pm=1846
 - TallPeople:            http://community.topcoder.com/stat?c=problem_statement&pm=2923
+- WhiteCells:            http://community.topcoder.com/stat?c=problem_statement&pm=8204
 - WordForm:              http://community.topcoder.com/stat?c=problem_statement&pm=2002
 
 ## Division II, Level Three
