@@ -7,29 +7,30 @@ Completed
 ---------
 
 ## Division I, Level One ##
-- AdvertisingAgency:   http://community.topcoder.com/stat?c=problem_statement&pm=7558
-- MatchMaking:         http://community.topcoder.com/stat?c=problem_statement&pm=2911
-- PaperFold:           http://community.topcoder.com/stat?c=problem_statement&pm=1846
-- TallPeople:          http://community.topcoder.com/stat?c=problem_statement&pm=2923
-- WordForm:            http://community.topcoder.com/stat?c=problem_statement&pm=2002
+- AdvertisingAgency:     http://community.topcoder.com/stat?c=problem_statement&pm=7558
+- MatchMaking:           http://community.topcoder.com/stat?c=problem_statement&pm=2911
+- PaperFold:             http://community.topcoder.com/stat?c=problem_statement&pm=1846
+- TallPeople:            http://community.topcoder.com/stat?c=problem_statement&pm=2923
+- WordForm:              http://community.topcoder.com/stat?c=problem_statement&pm=2002
 
 ## Division II, Level Three
-- Poetry:              http://community.topcoder.com/stat?c=problem_statement&pm=1835
-- QuickSums:           http://community.topcoder.com/stat?c=problem_statement&pm=2829
+- Poetry:                http://community.topcoder.com/stat?c=problem_statement&pm=1835
+- QuickSums:             http://community.topcoder.com/stat?c=problem_statement&pm=2829
 
 ## Division II, Level One ##
-- Betting Money:       http://community.topcoder.com/stat?c=problem_statement&pm=2297
-- CCipher:             http://community.topcoder.com/stat?c=problem_statement&pm=1667
-- CheckFunction:       http://community.topcoder.com/stat?c=problem_statement&pm=4788
-- NoOrderOfOperations: http://community.topcoder.com/stat?c=problem_statement&pm=2868
-- PassingGrade:        http://community.topcoder.com/stat?c=problem_statement&pm=1962
-- Quipu:               http://community.topcoder.com/stat?c=problem_statement&pm=1686
-- Soccer:              http://community.topcoder.com/stat?c=problem_statement&pm=1650
-- UserName:            http://community.topcoder.com/stat?c=problem_statement&pm=2913
-- Yahtzee:             http://community.topcoder.com/stat?c=problem_statement&pm=1692
+- Betting Money:         http://community.topcoder.com/stat?c=problem_statement&pm=2297
+- CCipher:               http://community.topcoder.com/stat?c=problem_statement&pm=1667
+- CheckFunction:         http://community.topcoder.com/stat?c=problem_statement&pm=4788
+- DiagonalDisproportion: http://community.topcoder.com/stat?c=problem_statement&pm=6003
+- NoOrderOfOperations:   http://community.topcoder.com/stat?c=problem_statement&pm=2868
+- PassingGrade:          http://community.topcoder.com/stat?c=problem_statement&pm=1962
+- Quipu:                 http://community.topcoder.com/stat?c=problem_statement&pm=1686
+- Soccer:                http://community.topcoder.com/stat?c=problem_statement&pm=1650
+- UserName:              http://community.topcoder.com/stat?c=problem_statement&pm=2913
+- Yahtzee:               http://community.topcoder.com/stat?c=problem_statement&pm=1692
 
 WIP
 ---
 
 ## Division I, Level One ##
-- Alignment:           http://community.topcoder.com/stat?c=problem_statement&pm=6249
+- Alignment:             http://community.topcoder.com/stat?c=problem_statement&pm=6249
