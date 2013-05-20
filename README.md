@@ -24,6 +24,7 @@ Completed
 - CheckFunction:         http://community.topcoder.com/stat?c=problem_statement&pm=4788
 - DiagonalDisproportion: http://community.topcoder.com/stat?c=problem_statement&pm=6003
 - FoxAndGame             http://community.topcoder.com/stat?c=problem_statement&pm=12438
+- InsideOut              http://community.topcoder.com/stat?c=problem_statement&pm=3452
 - NoOrderOfOperations:   http://community.topcoder.com/stat?c=problem_statement&pm=2868
 - PassingGrade:          http://community.topcoder.com/stat?c=problem_statement&pm=1962
 - Quipu:                 http://community.topcoder.com/stat?c=problem_statement&pm=1686
