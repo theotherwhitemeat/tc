@@ -25,6 +25,7 @@ Completed
 - DiagonalDisproportion: http://community.topcoder.com/stat?c=problem_statement&pm=6003
 - FoxAndGame             http://community.topcoder.com/stat?c=problem_statement&pm=12438
 - InsideOut              http://community.topcoder.com/stat?c=problem_statement&pm=3452
+- KiloMan                http://community.topcoder.com/stat?c=problem_statement&pm=2268
 - NoOrderOfOperations:   http://community.topcoder.com/stat?c=problem_statement&pm=2868
 - PassingGrade:          http://community.topcoder.com/stat?c=problem_statement&pm=1962
 - Quipu:                 http://community.topcoder.com/stat?c=problem_statement&pm=1686
