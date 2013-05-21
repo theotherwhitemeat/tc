@@ -30,6 +30,7 @@ Completed
 - NoOrderOfOperations:   http://community.topcoder.com/stat?c=problem_statement&pm=2868
 - PassingGrade:          http://community.topcoder.com/stat?c=problem_statement&pm=1962
 - Quipu:                 http://community.topcoder.com/stat?c=problem_statement&pm=1686
+- RosePetals:            http://community.topcoder.com/stat?c=problem_statement&pm=6635
 - Soccer:                http://community.topcoder.com/stat?c=problem_statement&pm=1650
 - Sortness:              http://community.topcoder.com/stat?c=problem_statement&pm=7263
 - UserName:              http://community.topcoder.com/stat?c=problem_statement&pm=2913
