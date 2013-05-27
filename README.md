@@ -9,6 +9,7 @@ Completed
 ## Division I, Level One ##
 - AdvertisingAgency:     http://community.topcoder.com/stat?c=problem_statement&pm=7558
 - MatchMaking:           http://community.topcoder.com/stat?c=problem_statement&pm=2911
+- PalindromeDecoding:    http://community.topcoder.com/stat?c=problem_statement&pm=6767
 - PaperFold:             http://community.topcoder.com/stat?c=problem_statement&pm=1846
 - TallPeople:            http://community.topcoder.com/stat?c=problem_statement&pm=2923
 - WhiteCells:            http://community.topcoder.com/stat?c=problem_statement&pm=8204
