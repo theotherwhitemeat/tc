@@ -13,6 +13,7 @@ Completed
 - PaperFold:             http://community.topcoder.com/stat?c=problem_statement&pm=1846
 - TallPeople:            http://community.topcoder.com/stat?c=problem_statement&pm=2923
 - WhiteCells:            http://community.topcoder.com/stat?c=problem_statement&pm=8204
+- WordCompositionGame:   http://community.topcoder.com/stat?c=problem_statement&pm=4483
 - WordForm:              http://community.topcoder.com/stat?c=problem_statement&pm=2002
 
 ## Division II, Level Three
