@@ -64,11 +64,12 @@ class LargestSubsequence(object):
             """ () Given a string base, generate all possible substrings. """
 
             # Strategy: creating a counting bit mask to reference string 
-            #  positions, and use that to generate the substrings:
+            #  positions, and use that to generate the substrings, along with
+            #  a score based upon a left-aligned string value:
             #  abc
-            #  001: c
-            #  010: b
-            #  011: bc
+            #  001: (c, 300)
+            #  010: (b, 200)
+            #  011: (bc, 230)
 
             for i in range(len(string_base)):
                 print bin(i)
