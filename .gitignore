@@ -1,0 +1,2 @@
+# Let's ignore .pyc and .pyo files for now.
+*.py[co]
