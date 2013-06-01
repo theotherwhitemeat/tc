@@ -8,6 +8,7 @@ Completed
 
 ## Division I, Level One ##
 - AdvertisingAgency:     http://community.topcoder.com/stat?c=problem_statement&pm=7558
+- LargestSubsequence:    http://community.topcoder.com/stat?c=problem_statement&pm=11471
 - MatchMaking:           http://community.topcoder.com/stat?c=problem_statement&pm=2911
 - PalindromeDecoding:    http://community.topcoder.com/stat?c=problem_statement&pm=6767
 - PaperFold:             http://community.topcoder.com/stat?c=problem_statement&pm=1846
@@ -44,4 +45,3 @@ WIP
 
 ## Division I, Level One ##
 - Alignment:             http://community.topcoder.com/stat?c=problem_statement&pm=6249
-- LargestSubsequence:    http://community.topcoder.com/stat?c=problem_statement&pm=11471
