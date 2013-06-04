@@ -46,7 +46,7 @@ Returns: "xple"
 Returns: "zyog"
 
 Status: Complete
-Runtime: O(nlogn)
+Runtime: O(n) where n == len(s)
 """
 
 class LargestSubsequence(object):
@@ -57,6 +57,60 @@ class LargestSubsequence(object):
     def getLargest(s):
         """ (str()) Given string s, return the lexicographically largest
             subsequence. """
+
+        # Strategy: Iterate through the input string, comparing each 
+        #  value s[i] with s[i+1].  If s[i] is larger, move down an
+        #  index and continue.  If s[i+1] is larger, remove s[i] and
+        #  compare s[i+1] to the new s[i].  Rinse and repeat.
+
+        i = 0
+        # Iterate over the string until we are end on the last element
+        while (i + 1) < len(s):
+            # If s[i] is larger, our substring is optimal for these
+            #  two values, so move forward an index.
+            if s[i] >= s[i+1]:
+                i = i + 1
+            # If s[i] is smaller, remove it
+            else:
+                s = s[:i] + s[i+1:]
+                # If we aren't at the index of the first char in s,
+                #  move our index back a place to compare s[i+1] and
+                #  the new s[i].
+                if i > 0:
+                    i = i - 1
+
+        return s
+
+
+def main():
+    """ sup main """
+    
+    tests = ["test", "a", "example", "aquickbrownfoxjumpsoverthelazydog"]
+
+    for test in tests:
+        print "Substrings-%s: %s" % (test, LargestSubsequence.getLargest(test))
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+class LargestSubsequenceDumb(object):
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def getLargest(s):
+        """ (str()) Given string s, return the lexicographically largest
+            subsequence. """
+
+        # Note: This was a poor strategy that I initially selected to 
+        #  solve this problem.  I should have spent more time thinking
+        #  about the problem before diving in with an answer. I have 
+        #  left this answer here so the viewer can observe
+        #  the difference in complexity of code for an elegant solution
+        #  versus a non-elegant solution.
 
         # Strategy
         #
@@ -147,18 +201,5 @@ class LargestSubsequence(object):
             output += char
 
         return output
-
-
-def main():
-    """ sup main """
-    
-    tests = ["test", "a", "example", "aquickbrownfoxjumpsoverthelazydog"]
-
-    for test in tests:
-        print "Substrings-%s: %s" % (test, LargestSubsequence.getLargest(test))
-
-if __name__ == "__main__":
-    main()
-
 
 
