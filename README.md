@@ -12,6 +12,7 @@ Completed
 - MatchMaking:           http://community.topcoder.com/stat?c=problem_statement&pm=2911
 - PalindromeDecoding:    http://community.topcoder.com/stat?c=problem_statement&pm=6767
 - PaperFold:             http://community.topcoder.com/stat?c=problem_statement&pm=1846
+- Snowflakes:            http://community.topcoder.com/stat?c=problem_statement&pm=6072
 - TallPeople:            http://community.topcoder.com/stat?c=problem_statement&pm=2923
 - WhiteCells:            http://community.topcoder.com/stat?c=problem_statement&pm=8204
 - WordCompositionGame:   http://community.topcoder.com/stat?c=problem_statement&pm=4483
