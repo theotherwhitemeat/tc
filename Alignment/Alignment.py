@@ -71,101 +71,87 @@ class Alignment(object):
         pass
 
     @staticmethod
-    def align(a, b, x):
-        """ (int) aligns strings A and B via '-' characters and returns alignment cost """
+    def align(A, B, x):
+        """ Given strings A, B, and cost x, calculate the minimally
+             expensive string permutations. """
 
-        resultA = str()
-        resultB = str()
+        def permute(index, p1, p2, dash):
+            """ Given an index and two strings, permute them with dashes.
+                Assumes index is apropos. """
 
-    @staticmethod
-    def getStringCost(string, x):
-        """ (int) given a string, calculate the total cost if '-' is cost x + 1 and
-             and '--' is x + 2 """
+            perm1 = p1[:i] + dash + p1[i:]
+            perm2 = p2[:i] + dash + p2[i:]
 
-        cost = 0
-        dash = 0
-        for char in string:
-            if char == '-':
-                dash += 1
-            elif dash > 0:
-                cost += (x + dash)
-                dash = 0
-        # now account for a string ending with dashes
-        if dash > 0:
-            cost += (x + dash)
+            return [(p1, perm2), (perm1, p2)]
 
-        return cost
+        def expense(p1, p2, x, dash):
+            """ Given strings p1, p2, and expense i, calculate the total
+                string costs.  Aggregate cost is calcuated by counting
+                the number of dashes in each string and summing them.
+                Additionally each unique run of dashes in a given string
+                adds a cost of i. """
 
-    @staticmethod
-    def getRecStringCost(string, x, dash):
-        """ (int) given a string, calculate the total cost if '-' is cost x + 1 and
-             and '--' is x + 2, recursively """
-        # return degenerate string case: empty
-        if len(string) == 0 and dash:
-            return x
-        elif len(string) == 0:
-            return 0
-        else:
+            p1run = False
+            p2run = False
             cost = 0
-            if dash and not(string[-1] == '-'): cost += x
-            if string[-1] == '-': cost += 1
-            dash = string[-1] == '-'
-            return (Alignment.getRecStringCost(string[0:-1], x, dash) + cost)
 
-    @staticmethod
-    def verifyAlignment(a, b):
-        """ (bool) verifies two strings are aligned """
-        if len(a) == len(b):
-            for i in range(len(a)):
-                if a[i] != b[i]:
-                    return False
-            return True
-        else:
-            return False
+            for i in range(len(p1)):
+                if p1[i] == dash:
+                    cost += 1
+                    p1run = True
+                elif p1run:
+                    cost += x
+                    p1run = False
+                if p2[i] == dash:
+                    cost += 1
+                    p2run = True
+                elif p2run:
+                    cost += x
+                    p2run = False
+            if p1run:
+                cost += x
+            if p2run:
+                cost += x
 
-    @staticmethod
-    def recursiveLevDistance(s, t):
-        """ (int) Recursively calculates the Levenshtein distance between two strings """
+            return cost
 
-        len_s = len(s)
-        len_t = len(t)
+        i = 0
+        pairs = list()
+        finals = list()
+        pairs.append((A, B))
+        dash = '-'
 
-        # test for degenerate cases of empty strings
-        if (len_s == 0): return len_t
-        if (len_t == 0): return len_s
+        # While there are still pairs to process...
+        while len(pairs) > 0:
+            p1, p2 = pairs.pop()
+            len1 = len(p1)
+            len2 = len(p2)
+            # debug
+            print "Popped: %s, %s, i = %d" % (p1, p2, i)
 
-        # test if last characters of the strings match
-        if (s[len_s-1] == t[len_t-1]):
-            cost = 0
-        else:
-            cost = 1
+            # If string lengths are the same and i is past string len,
+            #  the strings are fully processed.
+            if (len1 == len2) and (len1 <= i):
+                finals.append((p1, p2))
+                "Finals: %s, %s" % (p1, p2)
+            # p1 or p2 needs trailing dashes
+            elif (len1 > len2) and i >= len2:
+                p2 += dash
+                pairs.append((p1, p2))
+            elif (len1 < len2) and i >= len1:
+                p1 += dash
+                pairs.append((p1, p2))
+            # If i'th char is the same, move ahead
+            elif (p1[i] == p2[i]) or dash in (p1[i], p2[i]):
+                pairs.append((p1, p2))
+            elif p1[i] != p2[i]:  # ...chars not equal, so permute
+                new_pairs = permute(i, p1, p2, dash)
+                for pair in new_pairs:
+                    pairs.append(pair)
+            i += 1
 
-        return min(Alignment.recursiveLevDistance(s[0:len_s-1], t) + 1,
-                   Alignment.recursiveLevDistance(s, t[0:len_t-1]) + 1,
-                   Alignment.recursiveLevDistance(s[0:len_s-1], t[0:len_t-1]) + cost)
-''' WIP
-    @staticmethod
-    def recWeightedLevDistance(s, t, x, dash):
-        """ Recursively calculates the Levenshtein distance between two strings using
-        a weighted methodology: '-' is x+1, '--' is x + 2 """
+        print min([(expense(k[0], k[1], x, dash), k) for k in finals])
 
-        len_s = len(s)
-        len_t = len(t)
-
-        # test for degenerate cases of empty strings
-        if (len_s == 0): return Alignment.getStringCost(t)
-        if (len_t == 0): return Alignment.getStringCost(s)
-
-        # test if last characters of the strings match
-        if (s[len_s-1] == t[len_t-1]):
-            cost = 0
-        else:
-            cost = 1
-
-        return min(Alignment.recWeightedLevDistance(s[0:len_s-1], t, x) + 1,
-                   Alignment.recWeightedLevDistance(s, t[0:len_t-1], x) + 1,
-                   Alignment.recWeightedLevDistance(s[0:len_s-1], t[0:len_t-1], x) + cost)
-'''
 
 def main():
     """ sup main """
