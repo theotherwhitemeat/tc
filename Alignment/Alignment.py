@@ -49,19 +49,9 @@ Returns: 28
      
 ("AA", "B", 1)
 Returns: 5
-"""
 
-""" Status: WIP """
-
-""" Implementation strategy:
-
-So we can get the distance between the strings using my
-terrible run-time implementation of:
-
-  http://en.wikipedia.org/wiki/Levenshtein_distance
-
-...but the weighting / cost needs to be calculated differently.
-
+Status: Complete
+Runtime: O(2^n) where n == max(len(A), len(B)), although common-case is much faster.
 """
 
 class Alignment(object):
@@ -70,24 +60,24 @@ class Alignment(object):
 
     @staticmethod
     def align(A, B, x):
-        """ Given strings A, B, and cost x, calculate the minimally
-             expensive string permutations. """
+        """ (returns lowest cost string pair and cost) Given strings A, B,
+            and cost x, calculate the minimally expensive
+            string permutations. """
 
         def permute(index, p1, p2, dash):
-            """ Given an index and two strings, permute them with dashes.
-                Assumes index is apropos. """
+            """ (returns two permutations of a given string) Given an index
+                and two strings, permute them with dashes. Assumes index
+                is apropos. """
 
             perm1 = p1[:i] + dash + p1[i:]
             perm2 = p2[:i] + dash + p2[i:]
 
-            #print "Generated:\n%s\n%s\n\n%s\n%s" % (p1, perm2, perm1, p2)
-
             return [(p1, perm2), (perm1, p2)]
 
         def expense(p1, p2, x, dash):
-            """ Given strings p1, p2, and expense i, calculate the total
-                string costs.  Aggregate cost is calcuated by counting
-                the number of dashes in each string and summing them.
+            """ (returns strings' expense) Given strings p1, p2, and expense i,
+                calculate the total string costs.  Aggregate cost is calcuated
+                by counting the number of dashes in each string and summing them.
                 Additionally each unique run of dashes in a given string
                 adds a cost of i. """
 
@@ -116,36 +106,32 @@ class Alignment(object):
 
             return cost
 
-        i = 0
-        pairs = list()
-        finals = list()
-        maxlen = len(A) * 2
-        mincost = None
-        pairs.append((A, B, i))
+        # Seed pairs with first pair 
+        pairs = [(A, B, 0)]
         dash = '-'
+        # Seed final with worst-case scenario of half dashes
+        final = (A + dash * len(A), dash * len(B))
+        mincost = expense(final[0], final[1], x, dash)
+        maxlen = max(len(A), len(B)) * 2
 
         # While there are still pairs to process...
         while len(pairs) > 0:
             p1, p2, i = pairs.pop(0)
             len1 = len(p1)
             len2 = len(p2)
-            # Bail out if string is ever half or more dashes
-            if max(len1, len2) >= maxlen:
+            paircost = expense(p1, p2, x, dash)
+            # Bail out if string is ever half or more dashes, or if strings
+            #  are already more expensive than the current best solution.
+            if (max(len1, len2) >= maxlen) or (paircost > mincost):
                 continue
-            # Bail out if strings are already too expensive
-            if (mincost is not None) and (expense(p1, p2, x, dash) >= mincost):
-                continue
-            #print "Popped: %s, %s, i = %d" % (p1, p2, i)
-
             # If string lengths are the same and i is past string len,
             #  the strings are fully processed.
             if (len1 == len2) and (len1 <= i):
-                paircost = expense(p1, p2, x, dash)
-                if (paircost < mincost) or mincost is None:
+                if paircost < mincost:
                     mincost = paircost
-                    finals.append((p1, p2))
-                    print "Finals: %s, %s" % (p1, p2)
-                else:  # too expensive, move on
+                    final = (p1, p2)
+                    print "Final candidate: %s, %s" % (p1, p2)
+                else:  # Too expensive, drop the pair
                     continue
             # p1 or p2 needs trailing dashes
             elif (len1 > len2) and i >= len2:
@@ -154,18 +140,17 @@ class Alignment(object):
             elif (len1 < len2) and i >= len1:
                 p1 += dash
                 pairs.append((p1, p2, i + 1))
-            # If i'th char is the same, move ahead
+            # If i'th char is the same: append pair and permutations
             elif (p1[i] == p2[i]) or dash in (p1[i], p2[i]):
                 pairs.append((p1, p2, i + 1))
-                new_pairs = permute(i, p1, p2, dash)
-                for p1, p2 in new_pairs:
+                for p1, p2 in permute(i, p1, p2, dash):
                     pairs.append((p1, p2, i + 1))
-            elif p1[i] != p2[i]:  # ...chars not equal, so permute
-                new_pairs = permute(i, p1, p2, dash)
-                for p1, p2 in new_pairs:
+            # If chars not equal: append permutations
+            elif p1[i] != p2[i]:
+                for p1, p2 in permute(i, p1, p2, dash):
                     pairs.append((p1, p2, i + 1))
 
-        return min([(expense(k[0], k[1], x, dash), k) for k in finals])
+        return (expense(final[0], final[1], x, dash), final) 
 
 
 def main():
