@@ -107,16 +107,16 @@ class Alignment(object):
             return cost
 
         # Seed pairs with first pair 
-        pairs = [(A, B, 0)]
+        pairs = set([(A, B, 0)])
         dash = '-'
         # Seed final with worst-case scenario of half dashes
-        final = (A + dash * len(A), dash * len(B))
-        mincost = expense(final[0], final[1], x, dash)
         maxlen = max(len(A), len(B)) * 2
+        final = (A + dash * maxlen, dash * maxlen + B)
+        mincost = expense(final[0], final[1], x, dash)
 
         # While there are still pairs to process...
         while len(pairs) > 0:
-            p1, p2, i = pairs.pop(0)
+            p1, p2, i = pairs.pop()
             len1 = len(p1)
             len2 = len(p2)
             paircost = expense(p1, p2, x, dash)
@@ -136,19 +136,19 @@ class Alignment(object):
             # p1 or p2 needs trailing dashes
             elif (len1 > len2) and i >= len2:
                 p2 += dash
-                pairs.append((p1, p2, i + 1))
+                pairs.add((p1, p2, i + 1))
             elif (len1 < len2) and i >= len1:
                 p1 += dash
-                pairs.append((p1, p2, i + 1))
-            # If i'th char is the same: append pair and permutations
+                pairs.add((p1, p2, i + 1))
+            # If i'th char is the same: add pair and permutations
             elif (p1[i] == p2[i]) or dash in (p1[i], p2[i]):
-                pairs.append((p1, p2, i + 1))
+                pairs.add((p1, p2, i + 1))
                 for p1, p2 in permute(i, p1, p2, dash):
-                    pairs.append((p1, p2, i + 1))
-            # If chars not equal: append permutations
+                    pairs.add((p1, p2, i + 1))
+            # If chars not equal: add permutations
             elif p1[i] != p2[i]:
                 for p1, p2 in permute(i, p1, p2, dash):
-                    pairs.append((p1, p2, i + 1))
+                    pairs.add((p1, p2, i + 1))
 
         return (expense(final[0], final[1], x, dash), final) 
 
