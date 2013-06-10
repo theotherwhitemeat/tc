@@ -111,7 +111,7 @@ class Alignment(object):
         dash = '-'
         # Seed final with worst-case scenario of half dashes
         maxlen = max(len(A), len(B)) * 2
-        final = (A + dash * maxlen, dash * maxlen + B)
+        final = (A + dash * len(B), dash * len(A) + B)
         mincost = expense(final[0], final[1], x, dash)
 
         # While there are still pairs to process...
