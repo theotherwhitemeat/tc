@@ -10,6 +10,7 @@ Completed
 - AdvertisingAgency:     http://community.topcoder.com/stat?c=problem_statement&pm=7558
 - Alignment:             http://community.topcoder.com/stat?c=problem_statement&pm=6249
 - LargestSubsequence:    http://community.topcoder.com/stat?c=problem_statement&pm=11471
+- Matching:              http://community.topcoder.com/stat?c=problem_statement&pm=2249
 - MatchMaking:           http://community.topcoder.com/stat?c=problem_statement&pm=2911
 - PalindromeDecoding:    http://community.topcoder.com/stat?c=problem_statement&pm=6767
 - PaperFold:             http://community.topcoder.com/stat?c=problem_statement&pm=1846
