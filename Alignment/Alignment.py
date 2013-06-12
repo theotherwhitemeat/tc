@@ -59,7 +59,7 @@ class Alignment(object):
         pass
 
     @staticmethod
-    def align(A, B, x):
+    def align(A, B, x, return_strings=None):
         """ (returns lowest cost string pair and cost) Given strings A, B,
             and cost x, calculate the minimally expensive
             string permutations. """
@@ -150,7 +150,10 @@ class Alignment(object):
                 for p1, p2 in permute(i, p1, p2, dash):
                     pairs.add((p1, p2, i + 1))
 
-        return (expense(final[0], final[1], x, dash), final) 
+        if return_strings is not None:
+            return (expense(final[0], final[1], x, dash), final) 
+        else:
+            return expense(final[0], final[1], x, dash)
 
 
 def main():
@@ -162,7 +165,7 @@ def main():
              ("AA", "B", 1)]
 
     for test in tests:
-        print "Given %s, smallest alignment: %s" % (test, Alignment.align(*test))
+        print "Given %s, smallest alignment: %s" % (test, Alignment.align(*test, return_strings=True))
 
 if __name__ == "__main__":
     main()
