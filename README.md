@@ -51,4 +51,7 @@ TopCoder problems, implemented in Python and C++, with a focus on functionality 
 #### Division I, Level One ##
 - AdvertisingAgency:     http://community.topcoder.com/stat?c=problem_statement&pm=7558
 
+#### Division II, Level One ##
+- Betting Money:         http://community.topcoder.com/stat?c=problem_statement&pm=2297
+
 ### WIP

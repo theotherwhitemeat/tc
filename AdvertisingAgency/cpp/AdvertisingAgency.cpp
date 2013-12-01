@@ -68,12 +68,12 @@ using namespace std;
 
 
 class AdvertisingAgency {
-public:
-	int numberOfRejections(std::vector<int> requests);
+	public:
+		int numberOfRejections(vector<int> requests);
 };
 
-int AdvertisingAgency::numberOfRejections(std::vector<int> requests) {
-	std::set<int> slots_used;
+int AdvertisingAgency::numberOfRejections(vector<int> requests) {
+	set<int> slots_used;
 	int fails = 0;
 	for (int i = 0; i < requests.size(); i++)
 	{
@@ -100,7 +100,7 @@ int main() {
 		 };
 
 	AdvertisingAgency agency;
-	for (int i = 0; i < requests.size(); i++){
+	for (int i = 0; i < requests.size(); i++) {
 		int rejections = agency.numberOfRejections(requests[i]);
 		cout << "Rejections: " << rejections << endl;
 	}
