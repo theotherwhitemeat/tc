@@ -1,12 +1,12 @@
-tc
-==
+# TopCoder practice problems
+
 
 TopCoder problems, implemented in Python and C++, with a focus on functionality (vs runtime optimization).  Division I difficulty is higher than Division II.  Level difficulty scales with number value, thus one is easier than two is easier than three.
 
-Completed: Python
----------
+## Python
+### Completed
 
-## Division I, Level One ##
+#### Division I, Level One ##
 - AdvertisingAgency:     http://community.topcoder.com/stat?c=problem_statement&pm=7558
 - Alignment:             http://community.topcoder.com/stat?c=problem_statement&pm=6249
 - LargestSubsequence:    http://community.topcoder.com/stat?c=problem_statement&pm=11471
@@ -20,11 +20,11 @@ Completed: Python
 - WordCompositionGame:   http://community.topcoder.com/stat?c=problem_statement&pm=4483
 - WordForm:              http://community.topcoder.com/stat?c=problem_statement&pm=2002
 
-## Division II, Level Three
+#### Division II, Level Three
 - Poetry:                http://community.topcoder.com/stat?c=problem_statement&pm=1835
 - QuickSums:             http://community.topcoder.com/stat?c=problem_statement&pm=2829
 
-## Division II, Level One ##
+#### Division II, Level One ##
 - Betting Money:         http://community.topcoder.com/stat?c=problem_statement&pm=2297
 - CCipher:               http://community.topcoder.com/stat?c=problem_statement&pm=1667
 - CheckFunction:         http://community.topcoder.com/stat?c=problem_statement&pm=4788
@@ -43,16 +43,12 @@ Completed: Python
 - UserName:              http://community.topcoder.com/stat?c=problem_statement&pm=2913
 - Yahtzee:               http://community.topcoder.com/stat?c=problem_statement&pm=1692
 
-WIP: Python
----
+### WIP
 
+## C++
+### Completed
 
-Completed: C++
----------
-
-## Division I, Level One ##
+#### Division I, Level One ##
 - AdvertisingAgency:     http://community.topcoder.com/stat?c=problem_statement&pm=7558
 
-WIP: C++
----
-
+### WIP
