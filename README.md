@@ -1,9 +1,9 @@
 tc
 ==
 
-TopCoder problems, implemented in Python, with a focus on functionality (vs runtime optimization).  Division I difficulty is higher than Division II.  Level difficulty scales with number value, thus one is easier than two is easier than three.
+TopCoder problems, implemented in Python and C++, with a focus on functionality (vs runtime optimization).  Division I difficulty is higher than Division II.  Level difficulty scales with number value, thus one is easier than two is easier than three.
 
-Completed
+Completed: Python
 ---------
 
 ## Division I, Level One ##
@@ -43,7 +43,16 @@ Completed
 - UserName:              http://community.topcoder.com/stat?c=problem_statement&pm=2913
 - Yahtzee:               http://community.topcoder.com/stat?c=problem_statement&pm=1692
 
-WIP
+WIP: Python
 ---
 
+
+Completed: C++
+---------
+
 ## Division I, Level One ##
+- AdvertisingAgency:     http://community.topcoder.com/stat?c=problem_statement&pm=7558
+
+WIP: C++
+---
+
